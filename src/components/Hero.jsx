@@ -5,24 +5,34 @@ import Typed from 'typed.js'
 import { BsFillArrowDownCircleFill } from 'react-icons/bs'
 
 const Section = styled.div`
-  height: 100vh;
-  scroll-snap-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    height: 100vh;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `
 
 const Container = styled.div`
-  height: 100vh;
+    height: 90vh;
 `
 
 const Left = styled.div`
-  gap: 20px;
+    gap: 20px;
 `
 
 const Right = styled.div`
 
+`
+
+const Img = styled.img`
+    animation: wiggle 2s infinite ease alternate;
+
+    @keyframes wiggle {
+        to{
+            transform: translateY(20px)
+        }
+    }
 `
 
 const Hero = () => {
@@ -33,7 +43,7 @@ const Hero = () => {
         const typed = new Typed(el.current, {
             strings: ['Software Developer', 'Software Engineer', 'Web Developer'],
             typeSpeed: 100,
-            backSpeed: 50,
+            backSpeed: 60,
             loop: true,
             smartBackspace: true,
             loopCount: Infinity
@@ -62,7 +72,7 @@ const Hero = () => {
                         Software Application development, and Research.
                     </div>
 
-                    <button className='absolute bottom-20 right-2/4 text-5xl mt-4 animate-bounce text-right text-[#A6176C]' onClick={(e) => {
+                    <button className='absolute cursor-pointer z-10 bottom-9 right-2/4 text-5xl mt-4 animate-bounce text-right text-[#A6176C]' onClick={(e) => {
                         e.preventDefault();
                         window.location.href = '#experience';
                     }}>
@@ -71,7 +81,7 @@ const Hero = () => {
                 </Left>
 
                 <Right className='flex-[3_0_0%] relative flex justify-center'>
-                    <img className='w-[800px] h-[800px] object-contain' src='./images/bro.png' alt='hero-pic' />
+                    <Img className='w-[800px] h-[800px] object-contain absolute top-0 bottom-0 left-0 right-0 m-auto' src='./images/bro.png' alt='hero-pic' />
                 </Right>
             </Container>
         </Section >
