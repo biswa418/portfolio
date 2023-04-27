@@ -8,7 +8,34 @@ const Section = styled.div`
 
 const Who = () => {
   return (
-    <Section>Who</Section>
+    <Section id='projects'>
+      <ul>
+        <li>
+          <h3>Employee Review</h3>
+          <p>Making review system of any company easier. Authentication is needed to post the review. For both Admin-Employee</p>
+        </li>
+
+        <li>
+          <h3>Placement Cell</h3>
+          <p></p>
+        </li>
+
+        <li>
+          <h3>retro iPod - clone</h3>
+          <p></p>
+        </li>
+
+        <li>
+          <h3>DevConnect</h3>
+          <p></p>
+        </li>
+
+        <li>
+          <h3>DevConnect - Front End</h3>
+          <p></p>
+        </li>
+      </ul>
+    </Section>
   )
 }
 
