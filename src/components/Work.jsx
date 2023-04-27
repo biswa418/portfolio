@@ -8,7 +8,7 @@ const Section = styled.div`
 
 const Work = () => {
   return (
-    <Section>Work</Section>
+    <Section id='experience'>Work</Section>
   )
 }
 
