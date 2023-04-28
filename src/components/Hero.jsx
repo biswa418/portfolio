@@ -61,18 +61,18 @@ const Hero = () => {
         <Section id='#'>
             <Navbar />
             <Container className='w-4/5 flex justify-between relative items-center max-[768px]:px-5 max-[768px]:w-full max-[768px]:flex-col max-[768px]:items-center max-[768px]:justify-center'>
-                <Left className='flex-[2_2_0%] pl-4 flex flex-col justify-center relative'>
-                    <span className='text-5xl max-[768px]:text-2xl max-[768px]:mt-4 font-bold'>I'm a </span>
+                <Left className='flex-[2_2_0%] mt-4 pl-4 flex flex-col justify-center relative'>
+                    <span className='text-5xl max-[768px]:text-2xl max-[968px]:text-2xl max-[768px]:mt-4 font-bold'>I'm a </span>
 
-                    <div className='absolute top-14 text-5xl max-[768px]:mt-2 max-[768px]:text-2xl h-30 min-w-max z-10'>
-                        <span className='text-6xl max-[768px]:text-3xl text-fuchsia-500 font-bold' ref={el} />
+                    <div className='absolute top-14 text-5xl max-[968px]:text-2xl max-[968px]:h-max max-[768px]:mt-2 max-[768px]:text-2xl h-30 min-w-max z-10'>
+                        <span className='text-6xl max-[968px]:text-2xl max-[768px]:text-3xl text-fuchsia-500 font-bold' ref={el} />
                     </div>
 
-                    <div className='text-2xl font-light max-[1000px]:text-xl max-[768px]:text-lg z-[1] max-[768px]:mt-12 mt-14'>
+                    <div className='text-2xl font-light max-[1000px]:text-lg max-[768px]:text-base z-[1] max-[768px]:mt-12 mt-14'>
                         With 2 years of experience in the industry.
-                        Enthusiastic team player, a fast learner with good problem-solving skills,
-                        my professional interests include Web Development,
-                        Software Application development, and Research.
+                        Enthusiastic team player, a fast learner with good problem-solving skills <span className='max-[1000px]:hidden'>,
+                            my professional interests include Web Development,
+                            Software Application development, and Research.</span>
                     </div>
 
                     <a href='./public/Biswajeet_cv.pdf' draggable='false' className='z-10 px-4 py-2 flex items-center w-max gap-4 justify-center rounded-full bg-fuchsia-200 ring-2 sm:ring-4 ring-fuchsia-300/30 text-fuchsia-700' target="_blank" rel="noopener noreferrer" download>
