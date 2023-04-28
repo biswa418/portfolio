@@ -10,11 +10,12 @@ const Section = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
     overflow: hidden;
 `
 
 const Container = styled.div`
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     gap: 50px;
 `
@@ -41,7 +42,7 @@ const Contact = () => {
     <Section id='contact'>
       <Container className='flex justify-between flex-col md:flex-row relative'>
         <Left className='items-end justify-center flex-col z-10'>
-          <div className='mx-auto flex flex-col justify-center items-center h-1/3 lg:h1/3 w-2/3 lg:w-1/3 '>
+          <div className='mx-auto flex flex-1 flex-col justify-center items-center h-1/3 lg:h1/3 w-2/3 lg:w-1/3 '>
             <h2 className='font-semibold text-4xl uppercase mb-5 mt-12 md:mt-5'>CONNECT</h2>
 
             <ul className='flex flex-col justify-between w-full '>
@@ -66,8 +67,8 @@ const Contact = () => {
               </div>
 
               <li>
-                <a href='./public/Biswajeet_cv.pdf' draggable='false' className='text-xl mx-auto lg:text-2xl lg:py-3 lg:px-5 font-medium z-10 px-2 py-1 md:my-3 flex items-center w-max gap-4 justify-center rounded-full bg-fuchsia-200 ring-2 sm:ring-4 ring-fuchsia-300/30 text-fuchsia-700' target="_blank" rel="noopener noreferrer" download>
-                  <button className='cursor-pointer font-medium text-xl lg:text-2xl text-fuchsia-700 mr-[-10px]'>
+                <a href='./public/Biswajeet_cv.pdf' draggable='false' className='text-xl mx-auto xl:text-2xl lg:text-xl lg:py-3 lg:px-5 font-medium z-10 px-2 py-1 md:my-3 flex items-center w-max gap-4 justify-center rounded-full bg-fuchsia-200 ring-2 sm:ring-4 ring-fuchsia-300/30 text-fuchsia-700' target="_blank" rel="noopener noreferrer" download>
+                  <button className='cursor-pointer font-medium text-xl xl:text-2xl lg:text-xl text-fuchsia-700 mr-[-10px]'>
                     <BsDownload />
                   </button>
                   Resume
@@ -76,8 +77,8 @@ const Contact = () => {
             </ul>
           </div>
 
-          <form onSubmit={handleSubmit} className='w-10/12 md:w-11/12 h-2/3 min-w-[270px] max-w-screen-lg max-[768px]:flex max-[768px]:flex-col max-[768px]:h-max max-[768px]:gap-2 max-[768px]:px-4 max-[768px]:py-6 gap-6 px-4 py-5 my-4 mx-auto md:mx-0 text-purple-900 bg-purple-200 md:px-12 lg:px-16 rounded-lg ring-4 ring-purple-200/30' action="" method="post">
-            <h2 className='font-semibold text-3xl uppercase mb-4 max-[768px]:m-0'>Contact</h2>
+          <form onSubmit={handleSubmit} className='flex-1 w-10/12 md:w-11/12 h-4/6 min-w-[270px] max-w-screen-lg max-[768px]:flex max-[768px]:flex-col max-[768px]:h-max max-[768px]:gap-2 max-[768px]:px-4 max-[768px]:py-6 gap-6 px-4 py-5 my-4 mx-auto md:mx-0 text-purple-900 bg-purple-200 md:px-10 lg:px-14 rounded-lg ring-4 ring-purple-200/30' action="" method="post">
+            <h2 className='font-semibold text-2xl xl:text-3xl uppercase mb-4 max-[768px]:m-0'>Contact</h2>
 
             <label className='flex flex-col mb-2 max-[768px]:m-0'>
               NAME
@@ -91,10 +92,10 @@ const Contact = () => {
 
             <label className='flex flex-col mb-2 max-[768px]:m-0 '>
               MESSAGE
-              <textarea id='Message' rows={3} className='p-2 rounded-md focus:outline-none focus:shadow-outline resize-none'></textarea>
+              <textarea id='Message' rows={2} className='p-2 rounded-md focus:outline-none focus:shadow-outline resize-none'></textarea>
             </label>
 
-            <button className='bg-purple-700 text-lg font-semibold uppercase tracking-normal sm:ring-4 text-purple-200 rounded-lg w-max p-3 ring-3 ring-purple-700/30 mt-3' action='submit'>
+            <button className='bg-purple-700 text-sm font-semibold uppercase tracking-normal sm:text-base sm:p-4 sm:ring-4 text-purple-200 rounded-lg w-max p-2 ring-3 ring-purple-700/30 mt-3' action='submit'>
               Send Message
             </button>
           </form>
@@ -111,6 +112,10 @@ const Contact = () => {
           <BsFillArrowUpCircleFill />
         </button>
       </Container>
+
+      <p className='w-full absolute bottom-1 capitalize flex justify-center items-center py-1 flex-col text-xs md:text-lg opacity-60'>
+        Designed and made by Biswajeet Sutar
+      </p>
     </Section>
   )
 }
