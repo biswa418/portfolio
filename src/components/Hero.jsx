@@ -58,7 +58,7 @@ const Hero = () => {
 
 
     return (
-        <Section id='#'>
+        <Section id='home'>
             <Navbar />
             <Container className='w-4/5 flex justify-between relative items-center max-[768px]:px-5 max-[768px]:w-full max-[768px]:flex-col max-[768px]:items-center max-[768px]:justify-center'>
                 <Left className='flex-[2_2_0%] mt-4 pl-4 flex flex-col justify-center relative'>
