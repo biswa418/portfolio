@@ -42,7 +42,7 @@ const Contact = () => {
     <Section id='contact'>
       <Container className='flex justify-between flex-col md:flex-row relative'>
         <Left className='items-end justify-center flex-col z-10'>
-          <div className='mx-auto flex flex-1 flex-col justify-center items-center h-1/3 lg:h1/3 w-2/3 lg:w-1/3 '>
+          <div className='mx-auto flex flex-2 flex-col justify-center items-center h-1/3 lg:h1/3 w-2/3 lg:w-1/3 '>
             <h2 className='font-semibold text-4xl uppercase mb-5 mt-12 md:mt-5'>CONNECT</h2>
 
             <ul className='flex flex-col justify-between w-full '>
@@ -77,7 +77,7 @@ const Contact = () => {
             </ul>
           </div>
 
-          <form onSubmit={handleSubmit} className='flex-1 w-10/12 md:w-11/12 h-4/6 min-w-[270px] max-w-screen-lg max-[768px]:flex max-[768px]:flex-col max-[768px]:h-max max-[768px]:gap-2 max-[768px]:px-4 max-[768px]:py-6 gap-6 px-4 py-5 my-4 mx-auto md:mx-0 text-purple-900 bg-purple-200 md:px-10 lg:px-14 rounded-lg ring-4 ring-purple-200/30' action="" method="post">
+          <form onSubmit={handleSubmit} className='flex-3 w-10/12 md:w-11/12 min-w-[270px] max-w-screen-lg flex flex-col justify-center max-[768px]:h-max max-[768px]:gap-2 max-[768px]:px-4 max-[768px]:py-6 gap-1 px-2 py-5 my-4 md:mx-0 text-purple-900 bg-purple-200 md:px-10 lg:px-14 rounded-lg ring-4 ring-purple-200/30' action="" method="post">
             <h2 className='font-semibold text-2xl xl:text-3xl uppercase mb-4 max-[768px]:m-0'>Contact</h2>
 
             <label className='flex flex-col mb-2 max-[768px]:m-0'>
