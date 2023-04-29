@@ -87,7 +87,7 @@ const Hero = () => {
                     <Img className='w-[800px] h-[800px] min-w-[800px] object-contain absolute top-0 bottom-0 left-0 right-0 m-auto' src='./images/bro.png' alt='hero-pic' />
                 </Right>
 
-                <button className='absolute cursor-pointer z-10 left-0 right-0 bottom-0 m-auto text-5xl mt-4 animate-bounce text-[#A6176C]' onClick={(e) => {
+                <button className='absolute flex justify-center items-center cursor-pointer z-10 left-0 right-0 bottom-0 m-auto text-5xl mt-4 animate-bounce text-[#A6176C]' onClick={(e) => {
                     e.preventDefault();
                     window.location.href = '#experience';
                 }}>
