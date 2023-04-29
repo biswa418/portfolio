@@ -41,7 +41,7 @@ const Contact = () => {
   return (
     <Section id='contact'>
       <Container className='flex justify-between flex-col md:flex-row relative'>
-        <Left className='items-end justify-center flex-col z-10'>
+        <Left className='items-center md:items-end justify-center flex-col z-10'>
           <div className='mx-auto flex flex-2 flex-col justify-center items-center h-1/3 lg:h1/3 w-2/3 lg:w-1/3 '>
             <h2 className='font-semibold text-4xl uppercase mb-5 mt-12 md:mt-5'>CONNECT</h2>
 
