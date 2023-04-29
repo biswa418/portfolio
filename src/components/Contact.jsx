@@ -77,7 +77,7 @@ const Contact = () => {
             </ul>
           </div>
 
-          <form onSubmit={handleSubmit} className='flex-3 w-10/12 md:w-11/12 min-w-[270px] max-w-screen-lg flex flex-col justify-center max-[768px]:h-max  max-[768px]:px-4 max-[768px]:py-6 gap-1 px-2 py-5 mb-4 md:mx-0 text-purple-900 bg-purple-200 md:px-10 lg:px-14 rounded-lg ring-4 ring-purple-200/30' action="" method="post">
+          <form onSubmit={handleSubmit} className='flex-3 w-10/12 md:w-10/12 md:mr-6 min-w-[270px] max-w-screen-lg flex flex-col justify-center max-[768px]:h-max  max-[768px]:px-4 max-[768px]:py-6 gap-1 px-2 py-5 mb-4 md:mx-0 text-purple-900 bg-purple-200 md:px-10 lg:px-14 rounded-lg ring-4 ring-purple-200/30' action="" method="post">
             <h2 className='font-semibold text-2xl xl:text-3xl uppercase mb-4 max-[768px]:m-0'>Contact</h2>
 
             <label className='flex flex-col mb-2 max-[768px]:m-0'>
