@@ -15,7 +15,7 @@ const Section = styled.div`
 `
 
 const Container = styled.div`
-    height: 90vh;
+    height: 95vh;
     width: 100%;
     gap: 50px;
 `
