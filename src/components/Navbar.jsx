@@ -20,7 +20,7 @@ const Navbar = () => {
                     {!hid && <GrClose className='text-white bg-white' />}
                 </button>
 
-                <ul className={`${state} transition-opacity ease-in-out duration-700 z-10 md:flex md:flex-row flex-col justify-evenly items-center py-16 md:py-0 md:relative absolute md:right-0 right-0 h-full w-1/2 top-0 bg-slate-800 bg-opacity-50 backdrop-filter backdrop-brightness-40 backdrop-blur-xl backdrop-contrast-300 md:backdrop-filter-none md:bg-transparent md:h-min md:w-min`}>
+                <ul className={`${state} transition-opacity ease-in-out duration-700 z-10 md:visible md:flex md:flex-row flex-col justify-evenly items-center py-16 md:py-0 md:relative absolute md:right-0 right-0 h-full w-1/2 top-0 bg-slate-800 bg-opacity-50 backdrop-filter backdrop-brightness-40 backdrop-blur-xl backdrop-contrast-300 md:backdrop-filter-none md:bg-transparent md:h-min md:w-min`}>
                     <li className='px-2 cursor-pointer text-xl md:text-base' onClick={(e) => {
                         e.preventDefault();
                         window.location.href = '#';
