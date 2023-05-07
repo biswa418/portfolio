@@ -1,6 +1,30 @@
 import React, { useState } from 'react';
 import { HiOutlineMenu } from 'react-icons/hi';
 import { GrClose } from 'react-icons/gr';
+import styled from 'styled-components';
+
+const Img = styled.div`
+    &:before{
+        content: '';
+        background-color: #c6a972;
+        display: block;
+        height: 2px;
+        position: absolute;
+        top: 20px;
+        transform: rotate(0deg) skewX(45deg) translate(-53%, 1500%);
+        width: 80px;
+    }
+
+    &:after{
+        content: '';
+        background-color: #c6a972;
+        display: block;
+        height: 2px;
+        position: absolute;
+        transform: rotate(0deg) skewX(45deg) translate(8%, -300%);
+        width: 60px;
+    }
+`;
 
 const Navbar = () => {
     const [hid, show] = useState(true);
@@ -11,7 +35,10 @@ const Navbar = () => {
         <nav className='flex justify-center md:w-full z-10'>
             <div className='flex justify-between py-3 items-center w-4/5 max-[768px]:w-full max-[768px]:p-3'>
                 <div className='flex items-center cursor-pointer' onClick={(e) => { e.preventDefault(); window.location.href = '#'; }}>
-                    <img src='./images/white-logo.png' draggable='false' className='h-9 max-[768px]:mt-3' alt='logo' />
+                    <img src='./images/white-logo.png' draggable='false' className='hidden md:block h-9 max-[768px]:mt-3' alt='logo' />
+                    <Img className='md:hidden'>
+                        <img src='./images/prof.png' draggable='false' className='md:hidden h-14 rotate-2' alt='logo' />
+                    </Img>
                     <p className='text-xl px-2 block w-full max-[768px]:hidden uppercase tracking-widest font-extrabold mon'> Biswajeet Sutar </p>
                 </div>
 
