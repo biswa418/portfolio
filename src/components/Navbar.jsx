@@ -20,8 +20,9 @@ const Img = styled.div`
         background-color: #c6a972;
         display: block;
         height: 2px;
+        z-index: 1;
         position: absolute;
-        transform: rotate(0deg) skewX(45deg) translate(8%, -300%);
+        transform: rotate(0deg) skewX(45deg) translate(15%, -500%);
         width: 60px;
     }
 `;
