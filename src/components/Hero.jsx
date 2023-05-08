@@ -76,7 +76,7 @@ const Hero = () => {
 
                     <div className='text-2xl font-light max-[1000px]:text-lg max-[768px]:text-base z-[1] max-[768px]:mt-13 mt-14'>
                         With 2 years of experience in the industry.
-                        Enthusiastic team player, a fast learner with good problem-solving skills <span className='max-[1000px]:hidden'>,
+                        Enthusiastic team player, a fast learner with good problem-solving skills <span className='max-[1060px]:hidden'>,
                             my professional interests include Web Development,
                             Software Application development, and Research.</span>
                     </div>

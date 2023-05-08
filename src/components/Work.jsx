@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import styled from 'styled-components'
 
 const Section = styled.div`
@@ -8,7 +8,10 @@ const Section = styled.div`
 
 const Work = () => {
   return (
-    <Section id='experience'>Work</Section>
+    <>
+      <Section id='experience'>Work
+      </Section>
+    </>
   )
 }
 
