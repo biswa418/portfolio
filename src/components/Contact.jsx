@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import { BsDownload, BsFillArrowUpCircleFill, BsGithub, BsLinkedin, BsMailbox2 } from 'react-icons/bs'
 import styled from 'styled-components'
 import Map from './Map'
+import emailjs from '@emailjs/browser';
 
 const Section = styled.div`
     height: 100vh;
@@ -31,13 +32,31 @@ const Right = styled.div`
 
 `
 
-let handleSubmit = (e) => {
-  e.preventDefault();
-
-
-}
-
 const Contact = () => {
+  const ref = useRef();
+  const [success, setSuccess] = useState(null);
+  const [send, setSend] = useState(false);
+
+  let handleSubmit = (e) => {
+    e.preventDefault();
+    setSend(true);
+
+    emailjs.sendForm('service_j24iegk', 'template_a4zgqik', ref.current, 'YIuVvcE40QuuNdjfq')
+      .then((result) => {
+        console.log(result.text);
+        setSuccess(true);
+        setSend(false);
+      }, (error) => {
+        console.log(error.text);
+        setSuccess(false);
+        setSend(false);
+      });
+
+    for (let i = 0; i < 3; i++) {
+      ref.current[i].value = '';
+    }
+  }
+
   return (
     <Section id='contact'>
       <Container className='flex justify-between flex-col md:flex-row relative'>
@@ -77,7 +96,7 @@ const Contact = () => {
             </ul>
           </div>
 
-          <form onSubmit={handleSubmit} className='flex-3 w-10/12 md:w-10/12 md:mr-6 min-w-[270px] max-w-screen-lg flex flex-col justify-center max-[768px]:h-max  max-[768px]:px-4 max-[768px]:py-6 gap-1 px-2 py-5 mb-4 md:mx-0 text-purple-900 bg-purple-200 md:px-10 lg:px-14 rounded-lg ring-4 ring-purple-200/30' action="" method="post">
+          <form ref={ref} onSubmit={handleSubmit} className='flex-3 w-10/12 md:w-10/12 md:mr-6 min-w-[270px] max-w-screen-lg flex flex-col justify-center max-[768px]:h-max  max-[768px]:px-4 max-[768px]:py-6 gap-1 px-2 py-5 mb-4 md:mx-0 text-purple-900 bg-purple-200 md:px-10 lg:px-14 rounded-lg ring-4 ring-purple-200/30' action="" method="post">
             <h2 className='font-semibold text-2xl xl:text-3xl uppercase mb-4 max-[768px]:m-0'>Contact</h2>
 
             <label className='flex flex-col mb-2 max-[768px]:m-0'>
@@ -92,12 +111,17 @@ const Contact = () => {
 
             <label className='flex flex-col mb-2 max-[768px]:m-0 '>
               MESSAGE
-              <textarea id='Message' rows={2} className='p-2 rounded-md focus:outline-none focus:shadow-outline resize-none'></textarea>
+              <textarea id='Message' name='message' rows={2} className='p-2 rounded-md focus:outline-none focus:shadow-outline resize-none'></textarea>
             </label>
 
-            <button className='bg-purple-700 text-sm font-semibold uppercase tracking-normal sm:text-base sm:p-4 sm:ring-4 text-purple-200 rounded-lg w-max p-2 ring-3 ring-purple-700/30' action='submit'>
-              Send Message
+            <button className='bg-purple-700 text-sm font-semibold uppercase tracking-normal sm:text-base sm:p-4 sm:ring-4 text-purple-200 rounded-lg w-max p-2 ring-3 ring-purple-700/30'
+              type='submit'>
+              {!send && 'Send Message'}
+              {send && 'Sending...'}
             </button>
+            {success &&
+              "Your message has been sent. We'll get back to you. Thanks."
+            }
           </form>
         </Left>
 
