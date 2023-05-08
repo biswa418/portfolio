@@ -94,7 +94,7 @@ const Hero = () => {
                         <ambientLight intensity={1} color={'darkblue'} />
                         <directionalLight position={[1, 2, 1]} color={'red'} intensity={0.2} />
                         <pointLight position={[-4, -5, -10]} color={'red'} intensity={0.2} />
-                        <Sphere args={[1, 100, 200]} scale={1.1} >
+                        <Sphere args={[1, 100, 200]} scale={1.3} >
                             <MeshDistortMaterial
                                 attach="material"
                                 distort={0.5}
@@ -102,7 +102,7 @@ const Hero = () => {
                             />
                         </Sphere>
                     </Canvas>
-                    <Img className='w-[200px]  md:w-[800px] h-[800px] min-w-[400px] object-contain absolute top-0 bottom-0 left-0 right-0 m-auto' src='./images/bro.png' alt='hero-pic' />
+                    <Img className='w-[200px]  md:w-[600px] max-[1920px]:w-[800px] h-[800px] min-w-[400px] object-contain absolute top-0 bottom-0 left-0 right-0 m-auto' src='./images/bro.png' alt='hero-pic' />
                 </Right>
 
                 <button className='absolute flex justify-center items-center cursor-pointer z-10 left-0 right-0 bottom-0 m-auto text-5xl mt-4 animate-bounce text-[#A6176C]' onClick={(e) => {
