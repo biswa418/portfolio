@@ -64,8 +64,10 @@ const Hero = () => {
                 <Left className='flex-[2_2_0%] mt-4 pl-4 flex flex-col justify-center relative'>
                     <span className='text-5xl max-[768px]:text-2xl max-[968px]:text-2xl max-[768px]:mt-4 font-bold'>I'm a </span>
 
-                    <div className='absolute top-12 text-5xl max-[968px]:text-2xl max-[968px]:h-max max-[768px]:mt-8 max-[768px]:text-2xl h-30 min-w-max z-[1]'>
-                        <span className='text-6xl max-[968px]:text-2xl max-[768px]:text-3xl text-fuchsia-500 font-bold' ref={el} />
+                    <div className='relative'>
+                        <div className='absolute text-5xl max-[968px]:text-2xl max-[968px]:h-max max-[768px]:text-2xl h-30 min-w-max z-[1]'>
+                            <span className='text-6xl max-[968px]:text-2xl max-[768px]:text-3xl text-fuchsia-500 font-bold' ref={el} />
+                        </div>
                     </div>
 
                     <div className='text-2xl font-light max-[1000px]:text-lg max-[768px]:text-base z-[1] max-[768px]:mt-13 mt-14'>
