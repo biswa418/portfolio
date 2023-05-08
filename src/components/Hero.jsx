@@ -31,13 +31,8 @@ const Right = styled.div`
 
 const Img = styled.img`
     animation: wiggle 2s infinite ease alternate;
-    user-drag: none;
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    
+    pointer-events: none;
+
     @keyframes wiggle {
         to{
             transform: translateY(20px)
