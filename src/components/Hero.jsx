@@ -31,8 +31,13 @@ const Right = styled.div`
 
 const Img = styled.img`
     animation: wiggle 2s infinite ease alternate;
-    draggable: false;
-
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    
     @keyframes wiggle {
         to{
             transform: translateY(20px)
@@ -103,7 +108,7 @@ const Hero = () => {
                             />
                         </Sphere>
                     </Canvas>
-                    <Img className='w-[200px]  md:w-[600px] min-[1920px]:w-[800px] min-w-[400px] object-contain absolute top-0 bottom-0 left-0 right-0 m-auto' src='./images/bro.png' alt='hero-pic' />
+                    <Img className='w-[200px]  md:w-[600px] min-[1920px]:w-[1000px] min-w-[400px] object-contain absolute top-0 bottom-0 left-0 right-0 m-auto' src='./images/bro.png' alt='hero-pic' />
                 </Right>
 
                 <button className='absolute flex justify-center items-center cursor-pointer z-10 left-0 right-0 bottom-0 m-auto text-5xl mt-4 animate-bounce text-[#A6176C]' onClick={(e) => {
