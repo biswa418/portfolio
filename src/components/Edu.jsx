@@ -13,30 +13,6 @@ const Pill = styled.span`
         transform: rotate(90deg) skew(145deg);
         width: 50px;
     }
-
-    @media screen and (max-width: 768px){
-        &:before{
-            width: 50px;
-            left: -5px;
-            top: 53px;
-        }
-    }
-
-    @media screen and (min-width: 1040px){
-        &:before{
-            width: 50px;
-            left: -5px;
-            top: 53px;
-        }
-    }
-
-    @media screen and (max-width: 490px){
-        &:before{
-            width: 50px;
-            left: -5px;
-            top: 53px;
-        }
-    }
 `
 
 const Edu = () => {
