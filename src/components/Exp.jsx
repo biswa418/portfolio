@@ -1,4 +1,5 @@
 import React from 'react'
+import { Fade } from 'react-awesome-reveal';
 import styled from 'styled-components';
 
 const Pill = styled.span`
@@ -43,29 +44,33 @@ const Exp = () => {
 
     const company = ['Factspan Inc.'];
     const duration = ['2021 - Present'];
-    const details = ['Designing and implementing various end-to-end data ingestion pipelines. Using AWS Glue jobs and Python, delivered over 200+ tables of data.',
-        'Accomplished excellent ETL knowledge by building complex SCD flows using streams, tasks, snowflake SQL consuming over 100k data daily.',
-        'Created complete automated backend pipeline to consume the data coming in through One-source API for our clients increasing efficiency by 40%.']
+    const details = [
+        'Created complete automated backend pipeline to consume the data coming in through One-source API for our clients increasing efficiency by 40%.',
+        'Designing and implementing various end-to-end data ingestion pipelines. Using AWS Glue jobs and Python, delivered over 200+ tables of data.',
+        'Accomplished excellent ETL knowledge by building complex SCD flows using streams, tasks, snowflake SQL consuming over 100k data daily.'
+    ]
 
 
     return (
-        <div className='h-full flex flex-col justify-center mx-auto w-11/12'>
-            <h2 className='uppercase text-xl font-semibold mb-2 pb-2 ps-4'>{company[0]}</h2>
+        <Fade>
+            <div className='h-full flex flex-col justify-center mx-auto w-11/12'>
+                <h2 className='uppercase text-xl font-semibold mb-2 pb-2 ps-4'>{company[0]}</h2>
 
-            <div className='relative'>
-                <Pill className='border-2 px-4 py-1 ms-4 rounded-full'>
-                    {duration[0]}
-                </Pill>
+                <div className='relative'>
+                    <Pill className='border-2 px-4 py-1 ms-4 rounded-full'>
+                        {duration[0]}
+                    </Pill>
 
-                <ul className=''>
-                    {details.map((points) => {
-                        return (
-                            <li key={details.indexOf(points)} className='mb-2 mt-3 ms-9 text-slate-400 text-sm break-words whitespace-break-spaces'>{points}</li>
-                        )
-                    })}
-                </ul>
+                    <ul className=''>
+                        {details.map((points) => {
+                            return (
+                                <li key={details.indexOf(points)} className='mb-2 mt-3 ms-9 text-slate-400 text-sm break-words whitespace-break-spaces'>{points}</li>
+                            )
+                        })}
+                    </ul>
+                </div>
             </div>
-        </div>
+        </Fade>
     )
 }
 

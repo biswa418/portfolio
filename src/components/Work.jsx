@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import Choices from './Choices'
 import Exp from './Exp'
 import Edu from './Edu'
+import { Fade, Slide } from "react-awesome-reveal";
 
 const Section = styled.div`
   height: 100vh;
@@ -15,7 +16,6 @@ const Section = styled.div`
 `
 
 const Right = styled.div`
-
 `
 
 const Container = styled.div`
@@ -24,12 +24,17 @@ const Container = styled.div`
 
 const Work = () => {
   const [select, setSelect] = useState(0);
+  const right = useRef(null);
 
   function handleChange(newVal) {
-    setSelect(newVal);
-  }
+    right.current.style.opacity = 0; //setting this to zero removes the artifact
 
-  const exp = []
+    setSelect(newVal);
+
+    window.setTimeout(() => {
+      right.current.style.opacity = 1;
+    }, 200); //show after 200ms
+  }
 
   return (
     <>
@@ -37,12 +42,12 @@ const Work = () => {
         <Container className='w-4/5 flex justify-between relative items-center max-[768px]:px-5 max-[768px]:w-full max-[768px]:flex-col max-[768px]:items-center max-[768px]:justify-center'>
           <Choices className='flex-1 absolute md:relative top-0' onChange={handleChange} />
 
-          <Right className='flex-1 relative flex justify-center'>
-            {select == 0 && <Exp />}
-            {select == 1 && <Edu />}
+          <Right ref={right} className={`flex-1 relative flex justify-center`} >
+            {select == 0 && <Slide direction='right'><Exp /></Slide>}
+            {select == 1 && <Slide direction='right'><Edu /></Slide>}
           </Right>
         </Container>
-      </Section>
+      </Section >
     </>
   )
 }

@@ -169,3 +169,29 @@ body {
   }
 
 }
+
+@media screen and (min-width: 1920px) {
+
+  .glass {
+    height: 110%;
+    width: 95px;
+  }
+
+  .glass-inner {
+    border-width: 9px;
+  }
+
+  .choice>div {
+    width: 41px;
+    height: 41px;
+  }
+
+  .choice-circle {
+    border-width: 9px;
+  }
+
+  .choice-name {
+    font-size: 35px;
+  }
+
+}
