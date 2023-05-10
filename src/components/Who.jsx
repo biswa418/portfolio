@@ -54,6 +54,12 @@ const ListItem = styled.li`
       }
     }
   }
+
+  &:active{
+    ::after{
+          width: 100%;
+    }
+  }
 `
 
 const Who = () => {
@@ -66,18 +72,20 @@ const Who = () => {
     , 'The UI part of the social media. Connects with the backend using APIs.'
   ]
 
-
-  let i = 0;
+  function active(e) {
+    e.target.active = true;
+    console.log(e.target.active);
+  }
 
   return (
     <Section id='projects' className='relative'>
-      <h2 className='text-5xl max-[968px]:text-3xl uppercase font-black tracking-wider'>Projects</h2>
-      <Container className='w-4/5 flex justify-between relative items-center max-[768px]:px-5 max-[768px]:w-full max-[768px]:flex-col max-[768px]:items-center max-[768px]:justify-center'>
+      <h2 className='text-4xl max-[968px]:text-3xl absolute top-10 text-[#c9c9c9] uppercase font-bold'>Projects</h2>
+      <Container className='w-4/5 mt-20 md:mt-0 flex justify-between relative items-center max-[768px]:px-5 max-[768px]:w-full max-[768px]:flex-col max-[768px]:items-center max-[768px]:justify-center'>
         <Left className='flex items-center'>
           <ul className='flex flex-col gap-5'>
             {name.map((n) => {
               return (
-                <ListItem key={n} name={n} className='text-7xl max-[968px]:text-4xl font-sans font-extrabold cursor-pointer text-transparent stroke'>
+                <ListItem onClick={active} key={n} name={n} className='md:text-5xl 2xl:text-7xl text-4xl font-sans font-extrabold cursor-pointer text-transparent stroke'>
                   {n}
                 </ListItem>
               )
@@ -90,7 +98,7 @@ const Who = () => {
         </Right>
       </Container>
 
-      <button className='absolute flex justify-center items-center cursor-pointer z-10 left-0 right-0 bottom-0 m-auto text-5xl mt-4 animate-bounce text-[#A6176C]' onClick={(e) => {
+      <button className='absolute flex justify-center items-center cursor-pointer z-10 left-0 right-0 bottom-5 m-auto text-5xl mt-4 animate-bounce text-[#A6176C]' onClick={(e) => {
         e.preventDefault();
         window.location.href = '#contact';
       }}>

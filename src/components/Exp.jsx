@@ -1,5 +1,5 @@
 import React from 'react'
-import { Fade } from 'react-awesome-reveal';
+import { Bounce, Fade, Rotate, Slide } from 'react-awesome-reveal';
 import styled from 'styled-components';
 
 const Pill = styled.span`
@@ -43,7 +43,7 @@ const Pill = styled.span`
 const Exp = () => {
 
     const company = ['Factspan Inc.'];
-    const duration = ['2021 - Present'];
+    const duration = ['2021 - Now'];
     const details = [
         'Created complete automated backend pipeline to consume the data coming in through One-source API for our clients increasing efficiency by 40%.',
         'Designing and implementing various end-to-end data ingestion pipelines. Using AWS Glue jobs and Python, delivered over 200+ tables of data.',
@@ -52,9 +52,11 @@ const Exp = () => {
 
 
     return (
-        <Fade>
+        <Fade cascade>
             <div className='h-full flex flex-col justify-center mx-auto w-11/12'>
-                <h2 className='uppercase text-xl font-semibold mb-2 pb-2 ps-4'>{company[0]}</h2>
+                <Slide>
+                    <h2 className='uppercase text-xl font-semibold mb-2 pb-2 ps-4'>{company[0]}</h2>
+                </Slide>
 
                 <div className='relative'>
                     <Pill className='border-2 px-4 py-1 ms-4 rounded-full'>
@@ -70,6 +72,7 @@ const Exp = () => {
                     </ul>
                 </div>
             </div>
+
         </Fade>
     )
 }

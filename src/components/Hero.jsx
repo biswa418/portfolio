@@ -73,7 +73,7 @@ const Hero = () => {
                         </div>
                     </div>
 
-                    <div className='text-2xl font-light max-[1000px]:text-lg max-[768px]:text-base z-[1] max-[768px]:mt-13 mt-14'>
+                    <div className='text-2xl font-light max-[1086px]:text-lg max-[768px]:text-base z-[1] max-[768px]:mt-13 mt-14'>
                         With 2 years of experience in the industry.
                         Enthusiastic team player, a fast learner with good problem-solving skills <span className='max-[1060px]:hidden'>,
                             my professional interests include Web Development,
@@ -107,13 +107,14 @@ const Hero = () => {
                     <Img className='w-[200px]  md:w-[600px] min-[1920px]:w-[1000px] min-w-[400px] object-contain absolute top-0 bottom-0 left-0 right-0 m-auto' src='./images/bro.png' alt='hero-pic' />
                 </Right>
 
-                <button className='absolute flex justify-center items-center cursor-pointer z-10 left-0 right-0 bottom-0 m-auto text-5xl mt-4 animate-bounce text-[#A6176C]' onClick={(e) => {
-                    e.preventDefault();
-                    window.location.href = '#experience';
-                }}>
-                    <BsFillArrowDownCircleFill />
-                </button>
             </Container>
+
+            <button className='absolute flex justify-center items-center cursor-pointer z-10 left-0 right-0 bottom-5 m-auto text-5xl mt-4 animate-bounce text-[#A6176C]' onClick={(e) => {
+                e.preventDefault();
+                window.location.href = '#experience';
+            }}>
+                <BsFillArrowDownCircleFill />
+            </button>
         </Section >
     )
 }
