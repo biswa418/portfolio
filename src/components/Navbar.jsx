@@ -32,6 +32,10 @@ const Navbar = () => {
 
     let state = hid ? 'invisible' : 'flex';
 
+    function startSlide(e) {
+        show(!hid);
+    }
+
     return (
         <nav className='flex justify-center md:w-full z-10'>
             <div className='flex justify-between py-3 items-center w-4/5 max-[768px]:w-full max-[768px]:p-3'>
@@ -43,7 +47,7 @@ const Navbar = () => {
                     <p className='text-xl px-2 block w-full max-[768px]:hidden uppercase tracking-widest font-extrabold mon'> Biswajeet Sutar </p>
                 </div>
 
-                <button className='md:hidden absolute z-20 right-5 top-5 py-2 text-2xl transition hover:-translate-x-1 ease-in-out duration-700' onClick={() => show(!hid)}>
+                <button className='md:hidden absolute z-20 right-5 top-5 py-2 text-2xl transition hover:-translate-x-1 ease-in-out duration-700' onClick={startSlide}>
                     {hid && <HiOutlineMenu />}
                     {!hid && <GrClose className='text-white bg-white' />}
                 </button>
