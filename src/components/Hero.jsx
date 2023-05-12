@@ -73,7 +73,7 @@ const Hero = () => {
                         </div>
                     </div>
 
-                    <div className='text-2xl font-light max-[1086px]:text-lg max-[768px]:text-base z-[1] max-[768px]:mt-13 mt-14'>
+                    <div className='text-2xl font-light max-[1086px]:text-lg max-[768px]:text-base z-[1] max-[768px]:mt-13 mt-14 transform-gpu'>
                         With 2 years of experience in the industry.
                         Enthusiastic team player, a fast learner with good problem-solving skills <span className='max-[1060px]:hidden'>,
                             my professional interests include Web Development,
@@ -88,7 +88,7 @@ const Hero = () => {
                     </a>
                 </Left>
 
-                <Right className='flex-[3_0_0%] relative flex justify-center max-[768px]:w-[500px] h-2/3 lg:h-full'>
+                <Right className='flex-[3_0_0%] relative flex justify-center max-[768px]:w-[500px] h-2/3 lg:h-full transform-gpu'>
                     <Canvas camera={{ fov: 25, position: [5, 5, 5] }}>
                         <Suspense fallback={null}>
                             <OrbitControls enableZoom={false} />
