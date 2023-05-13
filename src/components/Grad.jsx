@@ -52,4 +52,4 @@ export default function Grad(props) {
     );
 }
 
-useGLTF.preload("/hat.gltf");
+useGLTF.preload("/portfolio/hat.gltf");

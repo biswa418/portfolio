@@ -22,4 +22,4 @@ export default function Workhat(props) {
     );
 }
 
-useGLTF.preload("/workhat.gltf");
+useGLTF.preload("/portfolio/workhat.gltf");
