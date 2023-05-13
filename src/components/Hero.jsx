@@ -112,7 +112,7 @@ const Hero = () => {
 
             </Container>
 
-            <button className='absolute flex justify-center items-center cursor-pointer z-10 left-0 right-0 bottom-5 m-auto text-5xl mt-4 animate-bounce text-[#A6176C]' onClick={(e) => {
+            <button className='absolute flex justify-center items-center cursor-pointer z-10 left-0 right-0 bottom-14 sm:bottom-5 m-auto text-5xl mt-4 animate-bounce text-[#A6176C]' onClick={(e) => {
                 e.preventDefault();
                 window.location.href = '#experience';
             }}>

@@ -114,7 +114,7 @@ const Contact = () => {
               <textarea id='Message' name='message' rows={2} className='p-2 rounded-md focus:outline-none focus:shadow-outline resize-none'></textarea>
             </label>
 
-            <button className='bg-purple-700 text-sm font-semibold uppercase tracking-normal sm:text-base sm:p-4 sm:ring-4 text-purple-200 rounded-lg w-max p-2 ring-3 ring-purple-700/30'
+            <button className='bg-purple-700 mt-5 sm:mt-0 text-sm font-semibold uppercase tracking-normal sm:text-base sm:p-4 sm:ring-4 text-purple-200 rounded-lg w-max p-2 ring-3 ring-purple-700/30'
               type='submit'>
               {!send && 'Send Message'}
               {send && 'Sending...'}

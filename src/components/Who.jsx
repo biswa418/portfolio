@@ -153,7 +153,7 @@ const Who = () => {
           </ul>
         </Left>
 
-        <Right ref={des} className='flex md:justify-center justify-evenly items-center md:flex-col'>
+        <Right ref={des} className='flex flex-grow md:justify-center justify-evenly items-center md:flex-col'>
           <div className='flex justify-center relative w-1/2 min-[769px]:w-full'>
             <Img src={source[select]} alt={name[select]} className='aspect-square w-2/3 min-[769px]:w-2/3 flex-none border-4 border-pink-600' />
 
@@ -205,7 +205,7 @@ const Who = () => {
         </Right>
       </Container>
 
-      <button className='absolute flex justify-center items-center cursor-pointer z-10 left-0 right-0 bottom-5 m-auto text-5xl mt-4 animate-bounce text-[#A6176C]' onClick={(e) => {
+      <button className='absolute flex justify-center items-center cursor-pointer z-10 left-0 right-0 bottom-10 sm:bottom-5 m-auto text-5xl mt-4 animate-bounce text-[#A6176C]' onClick={(e) => {
         e.preventDefault();
         window.location.href = '#contact';
       }}>
