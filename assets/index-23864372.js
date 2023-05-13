@@ -4869,6 +4869,13 @@ vec3 mod289(vec3 x){return x-floor(x*(1.0/289.0))*289.0;}vec4 mod289(vec4 x){ret
           width: 100%;
     }
   }
+
+  @media screen and (max-width: 640px) {
+    ::after{
+      top: 0px;
+      left: 0px;
+    }
+  }
 `,IZ=fn.img`
   object-fit: scale-down;
   background-color: #05141c;
@@ -4940,7 +4947,7 @@ vec3 mod289(vec3 x){return x-floor(x*(1.0/289.0))*289.0;}vec4 mod289(vec4 x){ret
 `,HZ=fn.div`
 `,VZ=fn.div`
   height: 90vh;
-`,GZ=()=>{const[t,e]=oe.useState(0),n=oe.useRef(null);function r(i){n.current.style.opacity=0,e(i),window.setTimeout(()=>{n.current.style.opacity=1},200)}return se.jsx(se.Fragment,{children:se.jsxs(BZ,{id:"experience",className:"relative",children:[se.jsxs(VZ,{className:"w-4/5 flex justify-between relative items-center max-[768px]:px-5 max-[768px]:w-full max-[768px]:flex-col max-[768px]:items-center max-[768px]:justify-center",children:[se.jsx(DZ,{className:"flex-1 absolute md:relative top-0",onChange:r}),se.jsxs(HZ,{ref:n,className:"flex-1 relative flex justify-center",children:[t==0&&se.jsx(sd,{direction:"right",children:se.jsx(UZ,{})}),t==1&&se.jsx(sd,{direction:"right",children:se.jsx(FZ,{})})]})]}),se.jsx("button",{className:"absolute flex justify-center items-center cursor-pointer z-10 left-0 right-0 bottom-5 m-auto text-5xl mt-4 animate-bounce text-[#A6176C]",onClick:i=>{i.preventDefault(),window.location.href="#projects"},children:se.jsx(Gw,{})})]})})},WZ=fn.div`
+`,GZ=()=>{const[t,e]=oe.useState(0),n=oe.useRef(null);function r(i){n.current.style.opacity=0,e(i),window.setTimeout(()=>{n.current.style.opacity=1},200)}return se.jsx(se.Fragment,{children:se.jsxs(BZ,{id:"experience",className:"relative",children:[se.jsxs(VZ,{className:"w-4/5 flex justify-between relative items-center max-[768px]:px-5 max-[768px]:w-full max-[768px]:flex-col max-[768px]:items-center max-[768px]:justify-center",children:[se.jsx(DZ,{className:"md:flex-1 absolute md:relative top-0",onChange:r}),se.jsxs(HZ,{ref:n,className:"flex-grow mt-10 md:mt-0 md:flex-1 relative flex justify-center",children:[t==0&&se.jsx(sd,{direction:"right",children:se.jsx(UZ,{})}),t==1&&se.jsx(sd,{direction:"right",children:se.jsx(FZ,{})})]})]}),se.jsx("button",{className:"absolute flex justify-center items-center cursor-pointer z-10 left-0 right-0 bottom-5 m-auto text-5xl mt-4 animate-bounce text-[#A6176C]",onClick:i=>{i.preventDefault(),window.location.href="#projects"},children:se.jsx(Gw,{})})]})})},WZ=fn.div`
     position: relative;
     left: 0;
     right: 0;
