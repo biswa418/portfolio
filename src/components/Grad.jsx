@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { PerspectiveCamera, useGLTF } from "@react-three/drei";
 
 export default function Grad(props) {
-    const { nodes, materials } = useGLTF("/hat.gltf");
+    const { nodes, materials } = useGLTF("/portfolio/hat.gltf");
     return (
         <group {...props} dispose={null}>
             <PerspectiveCamera makeDefault position={[10, 6, 10]} />

@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { PerspectiveCamera, useGLTF } from "@react-three/drei";
 
 export default function Workhat(props) {
-    const { nodes, materials } = useGLTF("/workhat.gltf");
+    const { nodes, materials } = useGLTF("/portfolio/workhat.gltf");
     return (
         <group {...props} dispose={null}>
             <group rotation={[-Math.PI / 2, 0, 0]}>
