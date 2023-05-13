@@ -19,7 +19,7 @@ const Map = () => {
             className='w-full absolute left-1/3 top-[-40px] '
         >
             <Geographies
-                geography="/features.json"
+                geography="/portfolio/features.json"
                 fill="#370a6a"
                 stroke="white"
                 strokeWidth={0.5}
