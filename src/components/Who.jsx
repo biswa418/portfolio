@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Fade, Slide } from 'react-awesome-reveal'
-import { BsFillArrowDownCircleFill } from 'react-icons/bs'
+import { BsFillArrowDownCircleFill, BsGithub, BsLink45Deg, BsYoutube } from 'react-icons/bs'
 import styled from 'styled-components'
+import project from '../../public/content';
 
 const Section = styled.div`
     height: 100vh;
@@ -73,19 +74,24 @@ const Img = styled.img`
 ;
 `
 
-const Who = () => {
+const Link = styled.div`
+  &:hover{
 
+  }
+`
+
+const Who = () => {
+  // which one is selected
   const [select, setSelect] = useState(0);
+  const [isOn, setOn] = useState(false);
   const des = useRef(null);
 
-  const name = ['Employee Review', 'Placement Cell', 'retro iPod Clone', 'DevConnect', 'DevConnect UI']
-  const desc = ['Making review system of any company easier. Authentication is needed to post the review. For both Admin-Employee'
-    , 'Keeps all the records of the college placements. For employee use only. Schedules interview for students'
-    , 'Feeling old yet? Experience the retro iPod UI made using React. With all gesture support and pre-loaded songs.'
-    , 'A social media app, connect with your friends. Post your thoughts, update your profile, comment on the post and chat with your friends.'
-    , 'The UI part of the social media. Connects with the backend using APIs.'
-  ]
-  const source = ['./images/projects/placement.gif', './images/projects/placement1.gif', './images/projects/inAction.gif', './images/projects/dev.gif', './images/projects/currentState.png'];
+  const name = project.name;
+  const desc = project.desc;
+  const source = project.source;
+  const link = project.link;
+  const host = project.host;
+  const video = project.video;
 
   function unfade(element) {
     var op = 0.1;
@@ -136,10 +142,52 @@ const Who = () => {
           </ul>
         </Left>
 
-        <Right ref={des} className='flex md:justify-center justify-evenly items-center md:flex-col overflow-hidden'>
-          <Img src={source[select]} alt={name[select]} className='aspect-square w-1/3 min-[769px]:w-2/3 flex-none border-4 border-pink-600' />
+        <Right ref={des} className='flex md:justify-center justify-evenly items-center md:flex-col'>
+          <div className='flex justify-center relative w-1/2 min-[769px]:w-full'>
+            <Img src={source[select]} alt={name[select]} className='aspect-square w-2/3 min-[769px]:w-2/3 flex-none border-4 border-pink-600' />
+
+            {/* source code */}
+            <ul className='absolute gap-1 flex lg:right-28 sm:top-3 sm:right-20 -top-20 right-5 z-10'>
+              <li>
+                <a href={link[select]} target='_blank'>
+                  <div className=' cursor-pointer text-xl md:text-2xl mr-2 md:py-3 md:px-3 font-medium z-10 px-2 py-2 flex items-center w-max gap-4 justify-center rounded-full bg-teal-200 ring-2 sm:ring-4 ring-teal-300/30 text-teal-700'>
+                    <BsGithub />
+                  </div>
+                </a>
+              </li>
+
+              {/* youtube */}
+              <li>
+                {
+                  (select == 0 || select == 1 || select == 3) &&
+                  <a href={video[select]} target='_blank'>
+                    <div className=' cursor-pointer text-xl md:text-2xl mr-2 md:py-3 md:px-3 font-medium z-10 px-2 py-2 flex items-center w-max gap-4 justify-center rounded-full bg-red-200 ring-2 sm:ring-4 ring-red-300/30 text-red-700'>
+                      <BsYoutube />
+                    </div>
+                  </a>
+                }
+              </li>
+
+              {/* hosted */}
+              <li>
+                {
+                  (select == 0 || select == 1 || select == 2) &&
+                  <a href={host[select]} target='_blank' onMouseOver={() => setOn(true)} onMouseOut={() => setOn(false)}>
+                    <Link className='cursor-pointer text-xl md:text-2xl mr-2 md:py-3 md:px-3 font-medium z-10 px-2 py-2 flex items-center w-max gap-4 justify-center rounded-full bg-purple-200 ring-2 sm:ring-4 ring-purple-300/30 text-purple-700'>
+                      <BsLink45Deg />
+                    </Link>
+                    {isOn &&
+                      <p className='absolute -right-5 -top-24 text-right z-20 md:text-sm text-xs mt-2 text-slate-800 bg-slate-200 px-5 py-2 w-[150%] rounded-xl ring-2 sm:ring-4 ring-slate-300/30'>
+                        Hosted on onRender, might take 10-15 seconds time to load.
+                      </p>}
+                  </a>
+                }
+              </li>
+            </ul>
+          </div>
+
           <Fade className='w-2/5 md:w-10/12 md:px-8 text-sm md:text-base text-left bg-pink-200 rounded-lg py-2 text-pink-900 md:mt-8 px-4 ring-4 ring-pink-300/30'>
-            <p>
+            <p className=''>
               {desc[select]}
             </p>
           </Fade>
