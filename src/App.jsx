@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './components'
-import { Contact, Hero, Who, Work } from './components'
+import { Contact, Hero, Who, Work, Loader } from './components'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -19,13 +19,26 @@ const Container = styled.div`
 
 function App() {
   const [count, setCount] = useState(0)
+  const [loading, isLoading] = useState(true);
+
+  useEffect(() => {
+    window.setTimeout(() => {
+      isLoading(false);
+    }, 1000);
+  }, []);
 
   return (
     <Container>
-      <Hero />
-      <Work />
-      <Who />
-      <Contact />
+      {loading && <Loader />}
+      {
+        !loading &&
+        <>
+          <Hero />
+          <Work />
+          <Who />
+          <Contact />
+        </>
+      }
     </Container>
   )
 }
