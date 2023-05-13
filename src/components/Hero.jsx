@@ -83,7 +83,7 @@ const Hero = () => {
                             Software Application development, and Research.</span>
                     </div>
 
-                    <a href='./public/Biswajeet_cv.pdf' draggable='false' className='z-[1] px-4 py-2 flex items-center w-max gap-4 justify-center rounded-full bg-fuchsia-200 ring-2 sm:ring-4 ring-fuchsia-300/30 text-fuchsia-700' target="_blank" rel="noopener noreferrer" download>
+                    <a href='./Biswajeet_cv.pdf' draggable='false' className='z-[1] px-4 py-2 flex items-center w-max gap-4 justify-center rounded-full bg-fuchsia-200 ring-2 sm:ring-4 ring-fuchsia-300/30 text-fuchsia-700' target="_blank" rel="noopener noreferrer" download>
                         <button className='cursor-pointer text-3xl text-fuchsia-700'>
                             <BsDownload />
                         </button>
