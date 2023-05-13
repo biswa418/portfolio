@@ -53,10 +53,13 @@ const Hero = () => {
             loopCount: Infinity
         });
 
+        window.scrollTo(0, 1);
+
         return () => {
             // Destroy Typed instance during cleanup to stop animation
             typed.destroy();
         };
+
     }, []);
 
 
