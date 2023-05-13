@@ -41,9 +41,9 @@ const Work = () => {
     <>
       <Section id='experience' className='relative'>
         <Container className='w-4/5 flex justify-between relative items-center max-[768px]:px-5 max-[768px]:w-full max-[768px]:flex-col max-[768px]:items-center max-[768px]:justify-center'>
-          <Choices className='flex-1 absolute md:relative top-0' onChange={handleChange} />
+          <Choices className='md:flex-1 absolute md:relative top-0' onChange={handleChange} />
 
-          <Right ref={right} className={`flex-1 relative flex justify-center`} >
+          <Right ref={right} className={`flex-grow mt-10 md:mt-0 md:flex-1 relative flex justify-center`} >
             {select == 0 && <Slide direction='right'><Exp /></Slide>}
             {select == 1 && <Slide direction='right'><Edu /></Slide>}
           </Right>

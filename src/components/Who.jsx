@@ -62,6 +62,13 @@ const ListItem = styled.li`
           width: 100%;
     }
   }
+
+  @media screen and (max-width: 640px) {
+    ::after{
+      top: 0px;
+      left: 0px;
+    }
+  }
 `
 
 const Img = styled.img`
