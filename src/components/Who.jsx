@@ -83,7 +83,11 @@ const Link = styled.div`
 const Who = () => {
   // which one is selected
   const [select, setSelect] = useState(0);
+
+  // when hover over link show message
   const [isOn, setOn] = useState(false);
+
+  // reference of Right element
   const des = useRef(null);
 
   const name = project.name;
