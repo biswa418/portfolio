@@ -86,7 +86,7 @@ const Contact = () => {
               </div>
 
               <li>
-                <a href='./Biswajeet_cv.pdf' draggable='false' className='text-xl mx-auto xl:text-2xl lg:text-xl lg:py-3 lg:px-5 font-medium z-10 px-2 py-1 md:my-3 flex items-center w-max gap-4 justify-center rounded-full bg-fuchsia-200 ring-2 sm:ring-4 ring-fuchsia-300/30 text-fuchsia-700' target="_blank" rel="noopener noreferrer" download>
+                <a href='./Biswajeet_Sutar.pdf' draggable='false' className='text-xl mx-auto xl:text-2xl lg:text-xl lg:py-3 lg:px-5 font-medium z-10 px-2 py-1 md:my-3 flex items-center w-max gap-4 justify-center rounded-full bg-fuchsia-200 ring-2 sm:ring-4 ring-fuchsia-300/30 text-fuchsia-700' target="_blank" rel="noopener noreferrer" download>
                   <button className='cursor-pointer font-medium text-xl xl:text-2xl lg:text-xl text-fuchsia-700 mr-[-10px]'>
                     <BsDownload />
                   </button>
