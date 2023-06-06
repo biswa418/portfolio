@@ -5132,7 +5132,7 @@ vec3 texelOld = texture2D(previousShadowMap, vUv).rgb;
     display: block;
     transform-style: preserve-3d;
     transform: rotateX(-20deg);
-`,KZ=()=>te.jsxs("div",{className:"flex flex-col justify-center items-center h-full",children:[te.jsx(YZ,{className:"pyramid-loader",children:te.jsxs("div",{class:"wrapper",children:[te.jsx("span",{class:"side side1"}),te.jsx("span",{class:"side side2"}),te.jsx("span",{class:"side side3"}),te.jsx("span",{class:"side side4"}),te.jsx("span",{class:"shadow"})]})}),te.jsx(Cd,{children:te.jsx("p",{children:"Loading..."})})]}),QZ=mn.div`
+`,KZ=()=>te.jsxs("div",{className:"flex flex-col justify-center items-center h-full",children:[te.jsx(YZ,{className:"pyramid-loader",children:te.jsxs("div",{className:"wrapper",children:[te.jsx("span",{className:"side side1"}),te.jsx("span",{className:"side side2"}),te.jsx("span",{className:"side side3"}),te.jsx("span",{className:"side side4"}),te.jsx("span",{className:"shadow"})]})}),te.jsx(Cd,{children:te.jsx("p",{children:"Loading..."})})]}),QZ=mn.div`
   height: 100vh;
   background-color: rebeccapurple;
   scroll-snap-type: y mandatory;
