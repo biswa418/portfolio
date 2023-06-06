@@ -18,12 +18,12 @@ const Loader = () => {
     return (
         <div className='flex flex-col justify-center items-center h-full'>
             <Pyramid className='pyramid-loader'>
-                <div class="wrapper">
-                    <span class="side side1"></span>
-                    <span class="side side2"></span>
-                    <span class="side side3"></span>
-                    <span class="side side4"></span>
-                    <span class="shadow"></span>
+                <div className="wrapper">
+                    <span className="side side1"></span>
+                    <span className="side side2"></span>
+                    <span className="side side3"></span>
+                    <span className="side side4"></span>
+                    <span className="shadow"></span>
                 </div>
             </Pyramid>
             <Slide>
