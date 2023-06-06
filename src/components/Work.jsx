@@ -48,7 +48,7 @@ const Work = () => {
           <Choices className='md:flex-1 absolute md:relative top-0 z-10' onChange={handleChange} />
 
           <Right ref={right} className={`flex-grow mt-10 md:mt-0 md:flex-1 relative flex justify-center`} >
-            <div className='absolute flex justify-center items-center -top-40 right-2 max-[1080px]:w-1/4 max-[1080px]:h-1/4  max-[1060px]:-top-10 xl:w-2/3 xl:h-2/3 z-10'>
+            {/* <div className='absolute flex justify-center items-center -top-40 right-2 max-[1080px]:w-1/4 max-[1080px]:h-1/4  max-[1060px]:-top-10 xl:w-2/3 xl:h-2/3 z-10'>
               {select == 0 &&
                 <Canvas camera={{ fov: 25, position: [15, 5, 20] }}>
                   <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={4.5} />
@@ -65,7 +65,7 @@ const Work = () => {
                   </Stage>
                 </Canvas>
               }
-            </div>
+            </div> */}
 
             {select == 0 && <Slide direction='right'><Exp /></Slide>}
             {select == 1 && <Slide direction='right'><Edu /></Slide>}
